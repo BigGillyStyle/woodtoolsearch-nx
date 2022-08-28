@@ -1,4 +1,5 @@
 FROM node:16.17.0-alpine3.16 as builder
+# hadolint ignore=DL3018
 RUN apk add --no-cache g++ make python3
 RUN mkdir /app && chown -R node:node /app
 WORKDIR /app
