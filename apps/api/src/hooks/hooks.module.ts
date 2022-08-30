@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { SanityModule } from './sanity/sanity/sanity.module';
 
-@Module({})
+@Module({
+  imports: [SanityModule],
+})
 export class HooksModule {}
