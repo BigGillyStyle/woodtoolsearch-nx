@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { SanityModule } from './sanity/sanity/sanity.module';
+import { SanityModule } from './sanity/sanity.module';
 
 @Module({
   imports: [SanityModule],

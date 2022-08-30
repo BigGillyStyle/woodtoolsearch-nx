@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { RouterModule } from '@nestjs/core';
 import { HooksModule } from '../hooks/hooks.module';
-import { SanityModule } from '../hooks/sanity/sanity/sanity.module';
+import { SanityModule } from '../hooks/sanity/sanity.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
