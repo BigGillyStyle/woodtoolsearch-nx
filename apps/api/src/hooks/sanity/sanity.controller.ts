@@ -3,7 +3,7 @@ import { SanityService } from './sanity.service';
 import { CreateSanityDto } from './dto/create-sanity.dto';
 import { UpdateSanityDto } from './dto/update-sanity.dto';
 
-@Controller('sanity')
+@Controller()
 export class SanityController {
   constructor(private readonly sanityService: SanityService) {}
 
