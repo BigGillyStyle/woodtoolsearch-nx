@@ -3,7 +3,7 @@ import { BandsawService } from './bandsaw.service';
 import { CreateBandsawDto } from './dto/create-bandsaw.dto';
 import { UpdateBandsawDto } from './dto/update-bandsaw.dto';
 
-@Controller('bandsaw')
+@Controller()
 export class BandsawController {
   constructor(private readonly bandsawService: BandsawService) {}
 
