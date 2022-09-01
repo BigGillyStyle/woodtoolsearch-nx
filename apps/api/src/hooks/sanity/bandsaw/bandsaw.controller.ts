@@ -1,14 +1,17 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common';
 import { BandsawService } from './bandsaw.service';
 import { CreateBandsawDto } from './dto/create-bandsaw.dto';
 import { UpdateBandsawDto } from './dto/update-bandsaw.dto';
 
 @Controller()
 export class BandsawController {
+  private readonly logger = new Logger(BandsawController.name);
+
   constructor(private readonly bandsawService: BandsawService) {}
 
   @Post()
-  create(@Body() createBandsawDto: CreateBandsawDto) {
+  create(@Body() createBandsawDto: CreateBandsawDto, @Req() request: Request) {
+    this.logger.log('Received request in badn');
     return this.bandsawService.create(createBandsawDto);
   }
 
