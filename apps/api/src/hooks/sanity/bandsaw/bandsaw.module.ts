@@ -2,15 +2,18 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/c
 import { BandsawService } from './bandsaw.service';
 import { BandsawController } from './bandsaw.controller';
 import { requireSignedRequest } from '@sanity/webhook';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
   controllers: [BandsawController],
   providers: [BandsawService],
 })
 export class BandsawModule implements NestModule {
+  constructor(private configService: ConfigService) {}
+
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(requireSignedRequest({ secret: process.env.SANITY_WEBHOOK_SECRET, parseBody: true }))
+      .apply(requireSignedRequest({ secret: this.configService.get<string>('SANITY_WEBHOOK_SECRET'), parseBody: true }))
       .forRoutes({ path: 'bandsaw', method: RequestMethod.POST });
   }
 }
