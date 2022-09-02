@@ -13,7 +13,7 @@ export class BandsawController {
   @Post()
   create(@Body() createBandsawDto: CreateBandsawDto, @Req() request: Request) {
     this.logger.log('Received request in bandsaw POST route');
-    this.logger.log(request.body);
+    this.logger.log(request);
     return this.bandsawService.create(createBandsawDto);
   }
 
