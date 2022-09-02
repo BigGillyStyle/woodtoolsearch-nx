@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Req } from '@nestjs/common';
 import { BandsawService } from './bandsaw.service';
 import { CreateBandsawDto } from './dto/create-bandsaw.dto';
 import { UpdateBandsawDto } from './dto/update-bandsaw.dto';
