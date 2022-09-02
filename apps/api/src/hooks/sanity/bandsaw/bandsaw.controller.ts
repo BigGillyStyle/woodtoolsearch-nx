@@ -1,4 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Req } from '@nestjs/common';
+import { Request } from 'express';
 import { BandsawService } from './bandsaw.service';
 import { CreateBandsawDto } from './dto/create-bandsaw.dto';
 import { UpdateBandsawDto } from './dto/update-bandsaw.dto';
@@ -11,7 +12,8 @@ export class BandsawController {
 
   @Post()
   create(@Body() createBandsawDto: CreateBandsawDto, @Req() request: Request) {
-    this.logger.log('Received request in badn');
+    this.logger.log('Received request in bandsaw POST route');
+    this.logger.log(request.body);
     return this.bandsawService.create(createBandsawDto);
   }
 
