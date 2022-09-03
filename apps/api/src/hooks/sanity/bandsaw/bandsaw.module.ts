@@ -13,7 +13,9 @@ export class BandsawModule implements NestModule {
 
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(requireSignedRequest({ secret: this.configService.get<string>('SANITY_WEBHOOK_SECRET'), parseBody: true }))
+      .apply(
+        requireSignedRequest({ secret: this.configService.get<string>('SANITY_WEBHOOK_SECRET'), parseBody: false })
+      )
       .forRoutes({ path: 'bandsaw', method: RequestMethod.POST });
   }
 }
