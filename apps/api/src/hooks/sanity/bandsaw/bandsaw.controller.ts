@@ -14,6 +14,7 @@ export class BandsawController {
   create(@Body() createBandsawDto: CreateBandsawDto, @Req() request: Request) {
     this.logger.log('Received request in bandsaw POST route');
     console.dir(request.body, { depth: 2 });
+    console.dir(createBandsawDto, { depth: 2 });
     return this.bandsawService.create(createBandsawDto);
   }
 
