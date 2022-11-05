@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@nestjs/schematics": "^9.0.3",
-    "@nestjs/testing": "^9.0.0",
+    "@nestjs/testing": "^9.1.6",
     "@nrwl/cli": "15.0.10",
     "@nrwl/cypress": "15.0.10",
     "@nrwl/eslint-plugin-nx": "15.0.10",
