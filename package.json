@@ -13,11 +13,11 @@
     "npm": "8.19.3"
   },
   "dependencies": {
-    "@nestjs/common": "^9.0.0",
+    "@nestjs/common": "^9.1.6",
     "@nestjs/config": "^2.2.0",
-    "@nestjs/core": "^9.0.0",
+    "@nestjs/core": "^9.1.6",
     "@nestjs/mapped-types": "*",
-    "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/platform-express": "^9.1.6",
     "@sanity/webhook": "^2.0.0",
     "algoliasearch": "^5.0.0-alpha.26",
     "class-transformer": "^0.5.1",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@nestjs/schematics": "^9.0.3",
-    "@nestjs/testing": "^9.0.0",
+    "@nestjs/testing": "^9.1.6",
     "@nrwl/cli": "15.0.10",
     "@nrwl/cypress": "15.0.10",
     "@nrwl/eslint-plugin-nx": "15.0.10",
