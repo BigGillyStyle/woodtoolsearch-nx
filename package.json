@@ -16,7 +16,7 @@
     "@nestjs/common": "^9.1.6",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.1.6",
-    "@nestjs/mapped-types": "*",
+    "@nestjs/mapped-types": "1.2.0",
     "@nestjs/platform-express": "^9.1.6",
     "@sanity/webhook": "^2.0.0",
     "algoliasearch": "^5.0.0-alpha.26",
