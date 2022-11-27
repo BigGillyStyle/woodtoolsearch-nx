@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { RouterModule } from '@nestjs/core';
-import { HooksModule } from '../hooks/hooks.module';
-import { BandsawModule } from '../hooks/sanity/bandsaw/bandsaw.module';
-import { SanityModule } from '../hooks/sanity/sanity.module';
+import { EventEmitterModule } from '@nestjs/event-emitter';
+import { ApiHooksModule, BandsawModule, SanityModule } from '@woodtoolsearch/api-hooks';
+// import { HooksModule } from '../hooks/hooks.module';
+// import { BandsawModule } from '../hooks/sanity/bandsaw/bandsaw.module';
+// import { SanityModule } from '../hooks/sanity/sanity.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -11,11 +13,12 @@ import { AppService } from './app.service';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, cache: true }),
-    HooksModule,
+    EventEmitterModule.forRoot(),
+    ApiHooksModule,
     RouterModule.register([
       {
         path: 'hooks',
-        module: HooksModule,
+        module: ApiHooksModule,
         children: [
           {
             path: 'sanity',

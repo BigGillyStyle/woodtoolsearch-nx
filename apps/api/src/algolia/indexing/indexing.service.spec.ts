@@ -1,16 +1,16 @@
 import { ConfigService } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
-import { AlgoliaService } from './algolia.service';
+import { IndexingService } from './indexing.service';
 
-describe('AlgoliaService', () => {
-  let service: AlgoliaService;
+describe('IndexingService', () => {
+  let service: IndexingService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [AlgoliaService, ConfigService],
+      providers: [IndexingService, ConfigService],
     }).compile();
 
-    service = module.get<AlgoliaService>(AlgoliaService);
+    service = module.get<IndexingService>(IndexingService);
   });
 
   it('should be defined', () => {
