@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import algoliasearch, { SearchClient, SearchIndex } from 'algoliasearch';
+import { AlgoliaIndexableObject } from './types';
 
 @Injectable()
 export class IndexingService {
@@ -20,7 +21,7 @@ export class IndexingService {
     return this.indices[indexName];
   }
 
-  saveObject(indexName: string, obj: Record<string, unknown>) {
+  saveObject<T extends AlgoliaIndexableObject>(indexName: string, obj: T) {
     const index = this.getIndex(indexName);
     return index.saveObject(obj).wait();
   }

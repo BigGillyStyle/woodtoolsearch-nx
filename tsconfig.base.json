@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@woodtoolsearch/api-algolia": ["libs/api/algolia/src/index.ts"],
-      "@woodtoolsearch/api-hooks": ["libs/api/hooks/src/index.ts"]
+      "@woodtoolsearch/api-events": ["libs/api/events/src/index.ts"],
+      "@woodtoolsearch/api-hooks": ["libs/api/hooks/src/index.ts"],
+      "@woodtoolsearch/api-tools": ["libs/api/tools/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

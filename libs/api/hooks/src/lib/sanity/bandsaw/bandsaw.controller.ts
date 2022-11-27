@@ -1,8 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Req } from '@nestjs/common';
+import { CreateBandsawDto, UpdateBandsawDto } from '@woodtoolsearch/api-tools';
 import { Request } from 'express';
 import { BandsawService } from './bandsaw.service';
-import { CreateBandsawDto } from './dto/create-bandsaw.dto';
-import { UpdateBandsawDto } from './dto/update-bandsaw.dto';
 
 @Controller()
 export class BandsawController {

@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
-import { CreateBandsawDto } from './dto/create-bandsaw.dto';
-import { UpdateBandsawDto } from './dto/update-bandsaw.dto';
-
-const INDEX_NAME = 'bandsaws';
+import { ApiEventsService } from '@woodtoolsearch/api-events';
+import { CreateBandsawDto, UpdateBandsawDto } from '@woodtoolsearch/api-tools';
 
 @Injectable()
 export class BandsawService {
+  constructor(private eventService: ApiEventsService) {}
+
   create(createBandsawDto: CreateBandsawDto) {
-    return 'This action adds a new bandsaw';
+    this.eventService.bandsawCreated(createBandsawDto);
   }
 
   findAll() {

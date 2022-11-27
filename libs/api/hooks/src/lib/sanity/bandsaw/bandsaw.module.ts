@@ -3,10 +3,11 @@ import { BandsawService } from './bandsaw.service';
 import { BandsawController } from './bandsaw.controller';
 import { requireSignedRequest } from '@sanity/webhook';
 import { ConfigService } from '@nestjs/config';
+import { ApiEventsService } from '@woodtoolsearch/api-events';
 
 @Module({
   controllers: [BandsawController],
-  providers: [BandsawService],
+  providers: [BandsawService, ApiEventsService],
 })
 export class BandsawModule implements NestModule {
   constructor(private configService: ConfigService) {}

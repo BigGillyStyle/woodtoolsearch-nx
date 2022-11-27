@@ -1,4 +1,6 @@
+import { EventEmitter2 } from '@nestjs/event-emitter';
 import { Test, TestingModule } from '@nestjs/testing';
+import { ApiEventsService } from '@woodtoolsearch/api-events';
 import { BandsawController } from './bandsaw.controller';
 import { BandsawService } from './bandsaw.service';
 
@@ -8,7 +10,7 @@ describe('BandsawController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [BandsawController],
-      providers: [BandsawService],
+      providers: [BandsawService, ApiEventsService, EventEmitter2],
     }).compile();
 
     controller = module.get<BandsawController>(BandsawController);
