@@ -9,6 +9,7 @@ const INDEX_NAME = 'bandsaws';
 @Injectable()
 export class BandsawIndexingService {
   constructor(private indexingService: IndexingService) {}
+
   @OnEvent(Event.BandsawCreated, { async: true })
   handleBandsawCreatedEvent(payload: CreateBandsawDto) {
     console.log('Bandsaw created event received', payload);
