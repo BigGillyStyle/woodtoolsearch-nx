@@ -15,6 +15,10 @@
     "node": "18.12.1",
     "npm": "8.19.2"
   },
+  "volta": {
+    "node": "18.12.1",
+    "npm": "8.19.2"
+  },
   "dependencies": {
     "@nestjs/common": "^9.1.6",
     "@nestjs/config": "^2.2.0",
