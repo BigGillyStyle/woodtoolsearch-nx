@@ -25,16 +25,14 @@ const client = algoliasearch(
 
 type HitProps = {
   hit: AlgoliaHit<{
-    name: string;
-    price: number;
+    manufacturerName: string;
   }>;
 };
 
 function Hit({ hit }: HitProps) {
   return (
     <>
-      <Highlight hit={hit} attribute="name" className="Hit-label" />
-      <span className="Hit-price">${hit.price}</span>
+      <Highlight hit={hit} attribute="manufacturerName" className="Hit-label" />
     </>
   );
 }
