@@ -27,7 +27,7 @@
     "@nestjs/mapped-types": "^1.2.0",
     "@nestjs/platform-express": "^9.1.6",
     "@sanity/webhook": "^2.0.0",
-    "algoliasearch": "^4.14.2",
+    "algoliasearch": "^4.14.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "core-js": "^3.25.5",
