@@ -1,8 +1,10 @@
-import { AppProps } from 'next/app';
+import '../styles/globals.css';
+import 'instantsearch.css/themes/satellite-min.css';
+import React from 'react';
 import Head from 'next/head';
-import './styles.css';
+import { AppProps } from 'next/app';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -15,4 +17,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default CustomApp;
+export default MyApp;
