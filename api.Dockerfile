@@ -28,6 +28,6 @@ WORKDIR /app
 USER node
 COPY --from=builder /app/dist/apps/api /app/dist
 COPY --from=builder /app/package.json /app/package-lock.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci --omit=dev --ignore-scripts && npm cache clean --force
 # https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#cmd
 CMD ["node", "dist/main.js"]
