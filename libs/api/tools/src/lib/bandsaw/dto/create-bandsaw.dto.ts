@@ -30,7 +30,7 @@ export class CreateBandsawDto {
 
   @IsDefined()
   @IsString()
-  manufacturerName: string;
+  Manufacturer: string;
 
   @IsOptional()
   amps110: number;
