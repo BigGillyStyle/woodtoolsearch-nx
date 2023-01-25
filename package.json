@@ -32,7 +32,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "core-js": "^3.27.1",
-    "instantsearch.css": "^7.4.5",
+    "instantsearch.css": "^8.0.0",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
