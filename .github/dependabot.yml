@@ -14,9 +14,6 @@ updates:
       timezone: "US/Mountain"
     ignore:
       # dependencies
-      - dependency-name: "@nestjs/common"
-      - dependency-name: "@nestjs/core"
-      - dependency-name: "@nestjs/platform-express"
       - dependency-name: "core-js"
       - dependency-name: "next"
       - dependency-name: "react"
@@ -26,8 +23,6 @@ updates:
       - dependency-name: "rxjs"
       - dependency-name: "tslib"
       # devDependencies
-      - dependency-name: "@nestjs/schematics"
-      - dependency-name: "@nestjs/testing"
       - dependency-name: "@nrwl/cli"
       - dependency-name: "@nrwl/cypress"
       - dependency-name: "@nrwl/eslint-plugin-nx"
