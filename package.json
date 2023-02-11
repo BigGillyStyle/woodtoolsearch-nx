@@ -25,7 +25,7 @@
     "@nestjs/config": "^2.3.0",
     "@nestjs/core": "^9.3.2",
     "@nestjs/event-emitter": "^1.4.1",
-    "@nestjs/mapped-types": "^1.2.0",
+    "@nestjs/mapped-types": "^1.2.2",
     "@nestjs/platform-express": "^9.3.2",
     "@sanity/webhook": "^2.0.0",
     "algoliasearch": "^4.14.3",
