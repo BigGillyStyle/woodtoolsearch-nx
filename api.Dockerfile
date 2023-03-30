@@ -1,4 +1,4 @@
-FROM node:18.14.2-alpine3.16 as builder
+FROM node:18.15-alpine3.16 as builder
 # hadolint ignore=DL3018
 RUN apk add --no-cache g++ make python3
 RUN mkdir /app && chown -R node:node /app
@@ -12,7 +12,7 @@ COPY --chown=node:node . ./
 RUN npm ci \
  && npx nx run api:build:production
 
-FROM node:18.14.2-alpine3.16
+FROM node:18.15-alpine3.16
 ENV NODE_ENV=production
 EXPOSE 3333
 # https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#handling-kernel-signals
