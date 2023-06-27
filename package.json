@@ -30,7 +30,7 @@
     "@sanity/webhook": "^2.0.0",
     "algoliasearch": "^4.14.3",
     "class-transformer": "^0.5.1",
-    "class-validator": "^0.13.2",
+    "class-validator": "^0.14.0",
     "core-js": "^3.28.0",
     "instantsearch.css": "^8.0.0",
     "next": "13.1.6",
